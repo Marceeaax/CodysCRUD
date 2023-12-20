@@ -7,27 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuarios</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <body>
-        <div class="container">
-            <h1>Lista de Usuarios</h1>
-            <!-- Botón de Crear Nuevo Usuario en la esquina superior derecha -->
-            <a href="{% url 'crear_usuario' %}" class="btn btn-crear top-right">Crear Nuevo Usuario</a>
-    
-            <!-- Grid para mostrar los usuarios -->
-            <div class="grid-container">
-                {% for usuario in usuarios %}
-                    <div class="usuario-card">
-                        <!-- Suponiendo que el modelo tiene un campo 'foto_perfil' -->
-                        <img src="{{ usuario.foto_perfil.url }}" class="usuario-foto" alt="Foto de perfil">
-                        <h3>{{ usuario.nombre_apellido }}</h3>
-                        <!-- Agrega más detalles del usuario si lo deseas -->
-                        <a href="{% url 'editar_usuario' usuario.id %}" class="btn">Editar</a>
-                        <a href="{% url 'eliminar_usuario' usuario.id %}" class="btn">Eliminar</a>
-                    </div>
-                {% empty %}
-                    <p>No hay usuarios registrados.</p>
-                {% endfor %}
-            </div>
+<body>
+    <div class="container">
+        <h1>Lista de Usuarios</h1>
+        <!-- Botón de Crear Nuevo Usuario en la esquina superior derecha -->
+        <a href="{% url 'crear_usuario' %}" class="btn btn-crear top-right">Crear Nuevo Usuario</a>
+
+        <!-- Grid para mostrar los usuarios -->
+        <div class="grid-container">
+            {% for usuario in usuarios %}
+                <div class="usuario-card">
+                    <!-- Suponiendo que el modelo tiene un campo 'foto_perfil' -->
+                    <img src="{{ usuario.foto_perfil.url }}" class="usuario-foto" alt="Foto de perfil">
+                    <h3>{{ usuario.nombre_apellido }}</h3>
+                    <!-- Agrega más detalles del usuario si lo deseas -->
+                    <a href="{% url 'editar_usuario' usuario.id %}" class="btn">Editar</a>
+                    <a href="{% url 'eliminar_usuario' usuario.id %}" class="btn">Eliminar</a>
+                </div>
+            {% empty %}
+                <p>No hay usuarios registrados.</p>
+            {% endfor %}
         </div>
-    </body>
+    </div>
+</body>
 </html>

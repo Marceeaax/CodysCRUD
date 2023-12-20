@@ -1,1 +1,37 @@
+# Entornos Virtuales
 env/
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Caches
+.cache
+
+# Base de datos
+db.sqlite3
+
+# Media y Static files
+media/
+static/
+
+# Archivos de logs
+*.log
+
+# Archivos de configuración sensibles
+settings_local.py
+
+# Archivos y carpetas del IDE
+.idea/
+.vscode/
+
+# Sistema archivos
+.DS_Store
+
+# Node modules
+node_modules/
+
+# Archivos temporales
+*~
+*.bak

@@ -22,6 +22,5 @@ Sigue estos pasos para configurar el proyecto en tu entorno local.
 Clona este repositorio a tu máquina local usando:
 
 ```bash
-git clone https://github.com/usuario/repositorio.git
-cd repositorio
+git clone https://github.com/Marceeaax/CodysCRUD
 

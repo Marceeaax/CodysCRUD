@@ -19,7 +19,11 @@
                 <div class="usuario-card">
                     <!-- Suponiendo que el modelo tiene un campo 'foto_perfil' -->
                     <img src="{{ usuario.foto_perfil.url }}" class="usuario-foto" alt="Foto de perfil">
-                    <h3>{{ usuario.nombre_apellido }}</h3>
+                    <div class="usuario-info">
+                        <h3>{{ usuario.nombre_apellido }}, {{ usuario.calcular_edad }}</h3>
+                        <p>{{ usuario.telefono }}</p>
+                        <p>{{ usuario.correo_electronico }}</p>
+                    </div>
                     <!-- Agrega más detalles del usuario si lo deseas -->
                     <a href="{% url 'editar_usuario' usuario.id %}" class="btn">Editar</a>
                     <a href="{% url 'eliminar_usuario' usuario.id %}" class="btn">Eliminar</a>

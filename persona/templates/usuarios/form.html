@@ -1,15 +1,42 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Usuario</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Formulario de Usuario</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Guardar</button>
-    </form>
-    <a href="{% url 'lista_usuarios' %}">Volver a la lista</a>
+    <div class="container form-container">
+        <h1>Formulario de Usuario</h1>
+        <form method="post" enctype="multipart/form-data" class="usuario-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_foto_perfil">Foto perfil:</label>
+                {{ form.foto_perfil }}
+            </div>
+            <div class="form-group">
+                <label for="id_nombre_apellido">Nombre y apellido:</label>
+                {{ form.nombre_apellido }}
+            </div>
+            <div class="form-group">
+                <label for="id_correo_electronico">Correo electrónico:</label>
+                {{ form.correo_electronico }}
+            </div>
+            <div class="form-group">
+                <label for="id_telefono">Teléfono:</label>
+                {{ form.telefono }}
+            </div>
+            <div class="form-group">
+                <label for="id_fecha_nacimiento">Fecha de nacimiento:</label>
+                {{ form.fecha_nacimiento}}
+            </div>
+            <button type="submit" class="btn">Guardar</button>
+            <a href="{% url 'lista_usuarios' %}" class="btn">Volver a la lista</a>
+        </form>
+    </div>
 </body>
 </html>

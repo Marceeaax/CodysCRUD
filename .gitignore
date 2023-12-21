@@ -14,7 +14,6 @@ db.sqlite3
 
 # Media y Static files
 media/
-static/
 
 # Archivos de logs
 *.log

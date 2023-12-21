@@ -1,0 +1,147 @@
+body {
+    background-color: #121212; /* Color de fondo oscuro */
+    color: #e0e0e0; /* Color de texto claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #ffffff; /* Blanco para títulos */
+}
+
+a {
+    color: #bb86fc; /* Color de ChatGPT modo noche para enlaces */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.usuario-item {
+    background-color: #252525; /* Un poco más claro que el fondo */
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.usuario-item a {
+    margin-left: 10px;
+}
+
+/* Botón genérico */
+.btn {
+    padding: 5px 15px;
+    margin-top: 15px;
+    background-color: #bb86fc; /* Color de ChatGPT modo noche */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #9e55e6;
+}
+
+/* Posiciona el botón en la esquina superior derecha */
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* Estilo para el botón de crear usuario con color verde */
+.btn-crear {
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Estilo para el grid de usuarios */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cambia 250px por el ancho mínimo deseado para cada tarjeta */
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Estilo para cada tarjeta de usuario en el grid */
+.usuario-card {
+    background-color: #333;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+/* Estilo para la imagen del perfil de usuario */
+.usuario-foto {
+    width: 100px; /* Ancho fijo */
+    height: 100px; /* Alto fijo */
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio disponible */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.usuario-info h3 {
+    margin: 0;
+    color: #ffffff; /* o el color que prefieras */
+    font-size: 1.2em; /* ajusta esto según necesites */
+}
+
+.usuario-info p {
+    margin: 5px 0;
+    margin-bottom: 15px;
+    color: #cccccc; /* o el color que prefieras */
+    font-size: 1em; /* ajusta esto según necesites */
+}
+
+.form-container {
+    background-color: #252525; /* Un poco más claro que el fondo */
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 600px; /* O el ancho que prefieras */
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+/* Asegúrate de incluir estilos para todos los tipos de inputs que uses */
+.form-group input[type="file"] {
+    /* Estilos para el input de archivo si es necesario */
+}
+
+/* Puedes personalizar aún más los estilos según tus necesidades */

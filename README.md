@@ -23,4 +23,30 @@ Clona este repositorio a tu máquina local usando:
 
 ```bash
 git clone https://github.com/Marceeaax/CodysCRUD
+```
 
+### Configurar el Entorno Virtual
+
+Para aislar las dependencias del proyecto, es recomendable utilizar un entorno virtual. Puedes crear uno utilizando:
+
+```bash
+python -m venv venv
+```
+
+Luego activa el entorno virtual, descarga las dependencias utilizando 
+
+```bash
+pip install -r requirements.txt
+```
+
+Luego ejecuta los siguientes comandos
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```
+
+Ahora, puedes acceder al proyecto en `http://127.0.0.1:8000/` desde tu navegador.
+
+![Interfaz de la aplicación](interfaz.png)

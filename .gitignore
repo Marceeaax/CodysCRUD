@@ -13,7 +13,7 @@ __pycache__/
 db.sqlite3
 
 # Media y Static files
-media/
+media/fotos_perfiles/
 
 # Archivos de logs
 *.log
